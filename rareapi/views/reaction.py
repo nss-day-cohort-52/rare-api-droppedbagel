@@ -30,11 +30,7 @@ class ReactionView(ViewSet):
     
     
     def create(self, request):
-        """Handle POST request to create new reaction
 
-        Returns:
-            Response -- JSON serialized reaction
-        """
         reaction = Reaction.objects.create(
             label=request.data['label'],
             image_url=request.data['image_url']
